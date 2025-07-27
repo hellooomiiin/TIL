@@ -1,0 +1,19 @@
+# Github
+
+로컬 저장소에 원격 저장소 추가
+```
+git remote add origin (url)
+```
+
+원격 저장소에 commit 목록을 업로드
+```
+git push origin master
+```
+
+굳이 새로 repo 만들 때 다시 폴더부터 만들어서 init 만들 필요 없음 그냥 git에서 빈 repo 만들어서 주소 생겼으면 그냥 그걸 복사해서 clone 복사한 주소 하면 init remote add 할 필요 없음 설정되어 있음 생긴 폴더에 
+
+git pull
+
+https://www.toptal.com/developers/gitignore/
+
+https://shields.io/

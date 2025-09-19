@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block contents %}
+
+<h1>안녕</h1>
+  
+{{ menus }}
+
+{% for menu in menus %}
+  <p>메뉴이름 : <a href={% url 'books:detail' menu %}>{{ menu }}</a></p>
+  <hr>
+{% endfor %}
+</body>
+</html>
+
+{% endblock contents %}

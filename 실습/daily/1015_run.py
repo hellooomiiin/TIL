@@ -173,31 +173,75 @@ sys.stdin = open("input.txt")
 # 2. 고슴도치 상하좌우 체크해서 범위 안이고 방문 안했고 물이 아니고 돌이 아니면 visited = 이전 visited + 1, queue에 append
 # * 만약에 체크했는데 == D 이면, return visited 값
 
-from collections import deque
+# from collections import deque
+#
+# R, C = map(int, input().split())
+# forest_map = [list(input()) for _ in range(R)]
+#
+# water_queue = deque([])
+#
+# for i in range(R):
+#     for j in range(C):
+#         if forest_map[i][j] == "*":
+#             water_queue.append((i, j))
+#
+#
+#
+#
+# def bfs():
+#     pass
+#
+#
+# for x, y in water_queue:
+#     dx = [-1, 1, 0, 0]
+#     dy = [0, 0, -1, 1]
+#     for i in range(4):
+#         nx = x + dx[i]
+#         ny = y + dy[i]
+#         if 0 <= nx <= R and 0 <= ny <= C and forest_map[nx][ny] == '.':
+#             forest_map[nx][ny] = '*'
+#             water_queue.append((nx, ny))
+
+# 백준 1987 알파벳
+
+# _____
+# from collections import deque
+#
+# R, C = map(int, input().split())
+# board = [list(input()) for _ in range(R)]
+#
+# queue = deque((0, 0))
+# path = [board[0][0]]
+#
+# visited = [[0] * C for _ in range(R)]
+#
+#
+# def bfs(x, y):
+#     while queue:
+#         nx, ny = queue.popleft()
+#         for i in range(4):
+#             dx = [-1, 1, 0, 0]
+#             dy = [0, 0, -1, 1]
+#             cx = nx + dx[i]
+#             cy = ny + dy[i]
+#             if 0 <= cx <= R and 0 <= cy <= C and board[cx][cy] not in path:
+#                 queue.append((cx, cy))
+#                 path.append(board[cx][cy])
+#                 visited[cx][cy] = visited[nx][ny] + 1
+#
+#
+# bfs(0, 0)
+#
+# print(visited)
+
+# -----
 
 R, C = map(int, input().split())
-forest_map = [list(input()) for _ in range(R)]
-
-water_queue = deque([])
-
-for i in range(R):
-    for j in range(C):
-        if forest_map[i][j] == "*":
-            water_queue.append((i, j))
+board = [list(input()) for _ in range(R)]
 
 
+def dfs():
+    if :
+        return
 
-
-def bfs():
-    pass
-
-
-for x, y in water_queue:
-    dx = [-1, 1, 0, 0]
-    dy = [0, 0, -1, 1]
-    for i in range(4):
-        nx = x + dx[i]
-        ny = y + dy[i]
-        if 0 <= nx <= R and 0 <= ny <= C and forest_map[nx][ny] == '.':
-            forest_map[nx][ny] = '*'
-            water_queue.append((nx, ny))
+dfs(0, 0)
